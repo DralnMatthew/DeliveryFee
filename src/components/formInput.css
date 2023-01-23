@@ -1,0 +1,32 @@
+.formInput{
+    display: flex;
+    flex-direction: column;
+    width: 342px;
+}
+
+input{
+    padding: 15px;
+    margin: 3px 0px 13px 0px;
+    border-radius: 5px;
+    border: 1px solid gray;
+}
+
+label{
+    font-size: 12px;
+    color: gray;
+}
+
+span{
+    font-size: 12px;
+    padding: 3px;
+    color: red;
+    display: none;
+    margin-bottom: 10px;
+}
+
+input[type="string"]:not(:focus):not(:placeholder-shown):invalid {
+    border: 1px solid red;
+}
+input:not(:focus):not(:placeholder-shown):invalid ~ span {
+    display: block;
+}
